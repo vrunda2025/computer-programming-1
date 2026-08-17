@@ -1,13 +1,16 @@
-#include <stdio.h>
-int main()
+#include<stdio.h>
+void swap(int *p,int*q);
+void main()
 {
-    int a,b,temp;
-    printf("enter a and b");
-    scanf("%d%d",&a , &b);
-
-    temp=a;
-    a=b;
-    b=temp;
-    printf("after swapping : a=%d\nb=%d",a,b);
-    return 0;
+    int a=2,b=3;
+    printf("\nBefore Swapping a:%d b:%d",a,b);
+    swap(&a,&b);
+    printf("\nAfter swapping a:%d b:%d",a, b);
+}
+void swap(int*p,int*q)
+{
+    int temp;
+    temp=*p;
+    *p=*q;
+    *q=temp;
 }
